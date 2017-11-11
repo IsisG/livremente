@@ -1,0 +1,67 @@
+.loginBox {
+    width: 350px;
+    height: 280px;
+    transform: translate(20%, -20%);
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.signUpBox {
+    width: 350px;
+    height: 400px;
+    transform: translate(20%, 0%);
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+    .loginBox p,
+    .signUpBox p {
+        font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+        font-size: 25px;
+        color: #333;
+        text-align: center;
+    }
+
+    .loginBox input,
+    .signUpBox input {
+        width: 100%;
+        margin-bottom: 20px;
+        color: #555a5f;
+        border: 1px solid;
+        border-color: #555a5f;
+        border-radius: 300px;
+        background: transparent;
+        outline: none;
+        height: 40px;
+        font-size: 14px;
+        padding: 15px;
+    }
+
+        .loginBox input[type="submit"],
+        .signUpBox input[type="submit"] {
+            color: #7952b3;
+            border-color: #7952b3;
+            font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            height: 40px;
+            font-size: 11px;
+            padding: 5px;
+        }
+
+            .loginBox input[type="submit"]:hover,
+            .loginBox input[type="submit"]:focus,
+            .loginBox input[type="submit"]:active,
+            .loginBox input[type="submit"].active,
+            .signUpBox input[type="submit"]:hover,
+            .signUpBox input[type="submit"]:focus,
+            .signUpBox input[type="submit"]:active,
+            .signUpBox input[type="submit"].active {
+                color: white;
+                border-color: #7952b3;
+                background-color: #7952b3;
+            }
