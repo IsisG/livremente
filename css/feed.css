@@ -201,6 +201,11 @@ body {
     vertical-align: middle;
 }
 
+.newpost textarea{
+    min-height: 50px;
+    max-height: 300px;
+}
+
 .newpost-buttonslist {
     list-style: none;
     padding: 0;

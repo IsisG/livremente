@@ -1,7 +1,7 @@
 <?php 
   $tipo = $_GET["tipo"];
   if(empty($tipo)){
-    echo "<script>location.href='feed.php';</script>";
+    // echo "<script>location.href='feed.php';</script>";
   }
 ?>
 
@@ -20,8 +20,6 @@
 
   <!-- POSTS -->
   <div id="posts-container" class="container-fluid container-posts">
-
-
     <div class="card-post">
       <div class="row">
         <div class="col-sm-2">
@@ -32,18 +30,27 @@
 
         <div class="newpost col-sm-10">
 
-          <div class="input-group">
-            <input type="text" class="form-control" disabled placeholder="Buscar ou adicionar livro" name="q">
-            <div class="input-group-btn">
-              <button type="button" class="btn btn-default button-textsearch">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-              <button type="button" class="btn btn-default button-textadd" data-toggle="modal" data-target="#adicionarLivroModal">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </button>
+          <form>
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" class="form-control" disabled placeholder="Buscar ou adicionar livro" name="q">
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-default button-textsearch">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                  <button type="button" class="btn btn-default button-textadd" data-toggle="modal" data-target="#adicionarLivroModal">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
 
+            <div class="form-group">
+              <textarea name="descricao" rows="5" class="col-sm-12" placeholder="Adicione um comentário sobre esse livro"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success">Publicar</button>
+          </form>
         </div>
       </div>
     </div>
@@ -65,7 +72,7 @@
         </div>
         <div class="modal-body">
 
-          <form id="adicionarLivroForm">
+          <form method="post" id="adicionarLivroForm">
             <div class="form-group">
               <label class="col-form-label">Título:</label>
               <input type="text" class="form-control" name="titulo" required>
@@ -93,7 +100,7 @@
 
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              <button type="submit" class="btn btn-success">Salvar</button>
+              <button type="button" onclick="adicionarLivro();" class="btn btn-success">Salvar</button>
             </div>
           </form>
 
@@ -108,20 +115,25 @@
 </html>
 
 <script>
-  $(function () {
+  function adicionarLivro(){
 
-    $('adicionarLivroForm').on('submit', function (e) {
-
-      e.preventDefault();
+    $("#adicionarLivroForm").submit();
 
       $.ajax({
         type: 'post',
         url: 'livro/salvar.php',
-        data: $('form').serialize(),
-        success: function () {
-          alert('form was submitted');
-        }
+        data: $('form').serialize()
       });
+
+  }
+
+  $(function () {
+
+    $('adicionarLivroForm').on('submit', function (e) {
+
+      alert("submit");
+
+      
 
     });
 

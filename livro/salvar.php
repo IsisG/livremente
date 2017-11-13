@@ -20,7 +20,9 @@
 
         $retorno = $db->query($sql);
 
-        if (!retorno) {
+        if (retorno) { 
+            echo "<script>alert('Adicionado com sucesso.')</script>";
+        } else {
             echo "<script>alert('Erro ao adicionar.')</script>";
             echo $db->error;
         }

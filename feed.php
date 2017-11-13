@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>Bare - Start Bootstrap Template</title>
+  <title>Início | Livremente</title>
 
 </head>
 
