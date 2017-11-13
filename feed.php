@@ -3,175 +3,109 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Bare - Start Bootstrap Template</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="bare/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-  <link href="css/grape.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <style>
-    body {
-      padding-top: 54px;
-    }
-
-    @media (min-width: 992px) {
-      body {
-        padding-top: 56px;
-      }
-    }
-  </style>
+  <title>Início | Livremente</title>
 
 </head>
 
 <body>
-
-  <!-- MENU -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="sidebar">
-    <div class="profilecard">
-      <div class="profilecard-bg" style="background-image: url(https://bootstrap-themes.github.io/application/assets/img/iceland.jpg);"></div>
-      <div class="profilecard-content text-center">
-        <a href="profile/index.html">
-          <img class="profilecard-avatar" src="https://goo.gl/g7xohU">
-        </a>
-
-        <h6>
-          <a class="profilecard-link" href="profile/index.html">André Silveira</a>
-        </h6>
-
-        <p>Tem gente que diz que uma casa sem cortinas é uma casa nua. Eu penso o mesmo de uma casa sem livros. (Martha Medeiros)</p>
-
-        <ul class="profilecard-statslist">
-          <li class="profilecard-statsitem">
-            <a href="#userModal" class="profilecard-link" data-toggle="modal">
-              Pg
-              <h6>3255</h6>
-            </a>
-          </li>
-
-          <li class="profilecard-statsitem">
-            <a href="#userModal" class="profilecard-link" data-toggle="modal">
-              Seguindo
-              <h6>12M</h6>
-            </a>
-          </li>
-
-          <li class="profilecard-statsitem">
-            <a href="#userModal" class="profilecard-link" data-toggle="modal">
-              Seguidores
-              <h6>1</h6>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="profilecard">
-      <div class="profilecard-content">
-        <h6>Stats
-          <small>·
-            <a href="#">Edit</a>
-          </small>
-        </h6>
-        <ul>
-          <li>
-            Went to
-            <a href="#">Oh, Canada</a>
-          </li>
-          <li>
-            Became friends with
-            <a href="#">Obama</a>
-          </li>
-          <li>
-            Worked at
-            <a href="#">Github</a>
-          </li>
-          <li>
-            Lives in
-            <a href="#">San Francisco, CA</a>
-          </li>
-          <li>
-            From
-            <a href="#">Seattle, WA</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-
+  <!-- NAVBAR -->
+  <?php include('layout/menu.php'); ?>
+  <!-- SIDEBAR -->
+  <?php include('layout/sidebar.php'); ?>
 
   <!-- POSTS -->
   <div id="posts-container" class="container-fluid container-posts">
 
+    <!-- NEW POST -->
+    <div class="card-post">
+      <div class="row">
+        <div class="col-sm-2">
+          <a href="profile.php" title="André Silveira">
+            <img src="https://goo.gl/g7xohU" alt="André Silveira" class="postcard-avatar">
+          </a>
+        </div>
+
+        <div class="newpost col-sm-10">
+          <ul class="newpost-buttonslist">
+            <li class="newpost-buttonitem">
+              <a href="newPost.php?tipo=lendo" class="profilecard-link">
+                <i class="fa fa-plus fa-lg lendo"></i>
+                <i class="fa fa-book fa-2x lendo" aria-hidden="true"></i>
+                <h6>Lendo</h6>
+              </a>
+            </li>
+
+            <li class="newpost-buttonitem">
+              <a href="newPost.php?tipo=lido" class="profilecard-link">
+                <i class="fa fa-plus fa-lg lido"></i>
+                <i class="fa fa-book fa-2x lido" aria-hidden="true"></i>
+                <h6>Lido</h6>
+              </a>
+            </li>
+
+            <li class="newpost-buttonitem">
+              <a href="newPost.php?tipo=queroler" class="profilecard-link">
+                <i class="fa fa-plus fa-lg queroler"></i>
+                <i class="fa fa-book fa-2x queroler" aria-hidden="true"></i>
+                <h6>Quero ler</h6>
+              </a>
+            </li>
+
+            <li class="newpost-buttonitem">
+              <a href="newPost.php?tipo=abandonei" class="profilecard-link">
+                <i class="fa fa-plus fa-lg abandonei"></i>
+                <i class="fa fa-book fa-2x abandonei" aria-hidden="true"></i>
+                <h6>Abandonei</h6>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- END OF NEW POST -->
+
+
     <div class="card-post">
       <div class="row">
         <div class="col-xs-3 col-sm-2">
-          <a href="personal-profile.html" title="Profile">
-            <img src="img/user.jpg" alt="User name" class="img-circle img-user">
+          <a href="profile.php" title="Isis Gomes">
+            <img src="https://goo.gl/1sf6gA" alt="Isis Gomes" class="postcard-avatar">
           </a>
         </div>
-        <div class="col-xs-9 col-sm-10 info-user">
-          <h3>
-            <a href="personal-profile.html" title="Profile">My User</a>
-          </h3>
+        <div class="col-xs-9 col-sm-8 info-user">
+          <h6>
+            <a href="profile.php" title="Isis Gomes">Isis Gomes</a>
+            <small>
+              <i>· 2h</i>
+            </small>
+          </h6>
           <p>
-            <i>2h</i>
+            <i class="fa fa-bookmark lendo"></i>
+            Estou lendo
+            <b>A Rainha Vermelha</b>
           </p>
+        </div>
+        <div class="col-xs-3 col-sm-2">
+            <img src="https://goo.gl/tuKhg5" alt="A Rainha Vermelha" class="postcard-book">
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-8 col-sm-offset-2 data-post">
-          <p>Lorem Ipsum Dolor si amet</p>
+        <div class="data-post col-sm-12">
+          Fazia algum tempo que não curtia tanto um livro de distopia com fantasia quanto estou curtindo este <3.
           <div class="reaction">
-            <img draggable="false" class="emoji" alt="❤" src="https://twemoji.maxcdn.com/16x16/2764.png"> 156
-            <img draggable="false" class="emoji" alt="😃" src="https://twemoji.maxcdn.com/16x16/1f603.png"> 54
+            <img draggable="false" class="emoji" alt="❤" src="https://twemoji.maxcdn.com/16x16/2764.png"> 120
           </div>
           <div class="comments">
-            <div class="more-comments">View more comments</div>
+            <div class="more-comments">Ver mais comentários</div>
             <ul>
               <li>
-                <b>User1</b> Lorem Ipsum Dolor si amet</li>
+                <b>Fulano</b> Amo esse livro!</li>
               <li>
-                <b>User2</b> Lorem Ipsum Dolor si amet
-                <img draggable="false" class="emoji" alt="😂" src="https://twemoji.maxcdn.com/16x16/1f602.png">
+                <b>Ciclano</b> Terminei esse em um dia. Muito bom!
               </li>
             </ul>
             <form>
-              <input type="text" class="form-control" placeholder="Add a comment">
+              <input type="text" class="form-control" placeholder="Adicione um comentário">
             </form>
           </div>
         </div>
@@ -181,96 +115,55 @@
     <div class="card-post">
       <div class="row">
         <div class="col-xs-3 col-sm-2">
-          <a href="user-profile.html" title="User Profile">
-            <img src="img/user2.jpg" alt="User name" class="img-circle img-user">
+          <a href="profile.php" title="Isis Gomes">
+            <img src="https://goo.gl/1sf6gA" alt="Isis Gomes" class="postcard-avatar">
           </a>
         </div>
-        <div class="col-xs-9 col-sm-10 info-user">
-          <h3>
-            <a href="user-profile.html" title="User Profile">User Name</a>
-          </h3>
+        <div class="col-xs-9 col-sm-8 info-user">
+          <h6>
+            <a href="profile.php" title="Isis Gomes">Isis Gomes</a>
+            <small>
+              <i>· 2h</i>
+            </small>
+          </h6>
           <p>
-            <i>2h</i>
+            <i class="fa fa-bookmark abandonei"></i>
+            Abandonei
+            <b>Piano Vermelho</b>
           </p>
+        </div>
+        <div class="col-xs-3 col-sm-2">
+            <img src="https://goo.gl/33xNGr" alt="Piano Vermelho" class="postcard-book">
         </div>
       </div>
       <div class="row">
-        <div class=" col-sm-8 col-sm-offset-2 data-post">
-          <p>Lorem Ipsum Dolor si amet</p>
-          <img src="img/post.jpg" alt="image post" class="img-post">
+        <div class="data-post col-sm-12">
+          A narrativa é arrastada, e os personagens são péssimos. Quem sabe na próxima vida?
           <div class="reaction">
-            <img draggable="false" class="emoji" alt="❤" src="https://twemoji.maxcdn.com/16x16/2764.png"> 1234
-            <img draggable="false" class="emoji" alt="😃" src="https://twemoji.maxcdn.com/16x16/1f603.png"> 54
+            <img draggable="false" class="emoji" alt="❤" src="https://twemoji.maxcdn.com/16x16/2764.png"> 36
           </div>
           <div class="comments">
-            <div class="more-comments">View more comments</div>
+            <div class="more-comments">Ver mais comentários</div>
             <ul>
               <li>
-                <b>User1</b> Lorem Ipsum Dolor si amet</li>
+                <b>Fulano</b> Como assim você não gostou?</li>
               <li>
-                <b>User2</b> Lorem Ipsum Dolor si amet
-                <img draggable="false" class="emoji" alt="😂" src="https://twemoji.maxcdn.com/16x16/1f602.png">
+                <b>Ciclano</b> :O
               </li>
             </ul>
             <form>
-              <input type="text" class="form-control" placeholder="Add a comment">
+              <input type="text" class="form-control" placeholder="Adicione um comentário">
             </form>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="card-post">
-      <div class="row">
-        <div class="col-xs-3 col-sm-2">
-          <a href="personal-profile.html" title="User Profile">
-            <img src="img/user.jpg" alt="User name" class="img-circle img-user">
-          </a>
-        </div>
-        <div class="col-xs-9 col-sm-10 info-user">
-          <h3>
-            <a href="personal-profile.html" title="User Profile">My User</a>
-          </h3>
-          <p>
-            <i>2h</i>
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-2 data-post">
-          <p>Lorem Ipsum Dolor si amet</p>
-          Video here
-          <video controls="">
-            <source src="img/post-video.mp4" type="video/mp4"> Your browser does not support the video tag.
-          </video>
-          <div class="reaction">
-            <img draggable="false" class="emoji" alt="❤" src="https://twemoji.maxcdn.com/16x16/2764.png"> 1234
-            <img draggable="false" class="emoji" alt="😃" src="https://twemoji.maxcdn.com/16x16/1f603.png"> 54
-          </div>
-          <div class="comments">
-            <div class="more-comments">View more comments</div>
-            <ul>
-              <li>
-                <b>User1</b> Lorem Ipsum Dolor si amet</li>
-              <li>
-                <b>User2</b> Lorem Ipsum Dolor si amet
-                <img draggable="false" class="emoji" alt="😂" src="https://twemoji.maxcdn.com/16x16/1f602.png">
-              </li>
-            </ul>
-            <form>
-              <input type="text" class="form-control" placeholder="Add a comment">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
 
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="bare/vendor/jquery/jquery.min.js"></script>
-  <script src="bare/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 

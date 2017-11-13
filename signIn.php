@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Livremente - Log In</title>
+    <title>Log In | Livremente</title>
     <!-- Bootstrap core CSS -->
     <link href="newage/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template -->
@@ -32,7 +32,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#features">Criar Conta</a>
+                        <a class="nav-link js-scroll-trigger" href="signUp.php">Criar Conta</a>
                     </li>
                 </ul>
             </div>
@@ -45,7 +45,7 @@
                     <div class="header-content mx-auto">
                         <h1 class="mb-5">Junte-se à rede social que libertará a sua mente!</h1>
                         <h3 class="mb-5">Crie sua estante, organize suas leituras, acompanhe seus amigos, e mais.</h3>
-                        <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Criar conta</a>
+                        <a href="signUp.php" class="btn btn-outline btn-xl js-scroll-trigger">Criar conta</a>
                     </div>
                 </div>
                 <div class="col-lg-5 my-auto">
